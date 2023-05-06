@@ -1,0 +1,8 @@
+[project_slug]
+type = "string"
+default = "test"
+description = "A project's slug"
+
+[list_strs]
+default = ["test", "test2"]
+description = "A list of strings"

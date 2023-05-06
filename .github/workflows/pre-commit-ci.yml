@@ -1,0 +1,58 @@
+# This runs a test on each of the pre-commit hooks this repo provides
+# It is a little tricky in how it does that. It converts the action from a docker-image to a docker type, so it
+# Can build the local PC-Dockerfile to test with.
+# There is a script at ./github/scripts/pre-commit-hooks-ci.py that updates .pre-commit-hooks.yaml to enable this
+# testing. Then, pre-commit try-repo is run to test the hook
+name: pre-commit CI
+
+on:
+  push:
+
+jobs:
+  pre-commit-ci:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {
+              name: "cookiecutter-autodocs-generate",
+              index: 0,
+              command: "generate cookiecutter",
+            }
+          - {
+              name: "cookiecutter-autodocs-validate",
+              index: 1,
+              command: "validate",
+            }
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
+
+      - name: Install pre-commit and pyyaml
+        run: pip install pre-commit pyyaml
+
+      - name: Copy dockerfile into place for testing
+        run: cp Docker/PC-Dockerfile Dockerfile && ls && git add Dockerfile
+
+      - name: Copy fixutre into place for testing
+        run: cp tests/fixtures/valid/matching_pair/cookiecutter.* ./ && git add ./cookiecutter.*
+
+      # when testing any branch not main, rewrite the entrypoint to pre-commit-hooks to
+      # use the local dockerfile for testing.
+      - name: Update .pre-commit-hooks.yaml args - branch testing
+        if: github.ref != 'refs/heads/main'
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: ".pre-commit-hooks.yaml"
+          changes: '{"$[${{ matrix.index }}].entry": "/cookiecutter-autodocs ${{ matrix.command }}", "$[${{ matrix.index }}].language": "docker"}'
+          commitChange: false
+
+      - name: Run pre-commit try-repo
+        run: pre-commit try-repo "$(pwd)" ${{ matrix.name }}

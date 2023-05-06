@@ -1,0 +1,30 @@
+name: "Cookiecutter Autodocs"
+description: "Generate docs for a cookiecutter template's inputs."
+author: "Andrew Herrington"
+inputs:
+  action:
+    description: "What action to take with this action. One of validate, generate-desc, generate-cookiecutter, or generate-markdown"
+    default: "validate"
+  cookiecutter_desc_file_path:
+    description: "Path to the cookiecutter.desc file"
+    default: "cookiecutter.desc"
+  cookiecutter_json_file_path:
+    description: "Path to your the cookiecutter.desc file"
+    default: "cookiecutter.json"
+  allow_empty_descriptions:
+    description: "Whether to allow an entry in cookiecutter.desc to have an empty description (blank string) when validating"
+    default: "false"
+runs:
+  using: "docker"
+  image: "docker://ghcr.io/andrewthetechie/cookiecutter-autodocs:v0.1.0" # x-release-please-version
+  env:
+    IN_GHA: "true"
+  args:
+    - ${{ inputs.action }}
+    - ${{ inputs.cookiecutter_desc_file_path }}
+    - ${{ inputs.cookiecutter_json_file_path }}
+    - --allow-empty-description
+    - ${{ inputs.allow_empty_descriptions }}
+branding:
+  icon: "file-plus"
+  color: "gray-dark"

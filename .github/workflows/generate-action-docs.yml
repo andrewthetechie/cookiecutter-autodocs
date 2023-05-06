@@ -1,0 +1,25 @@
+name: Generate Action Docs
+on:
+  push:
+jobs:
+  docs:
+    name: Generate Action Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: actions/checkout@v3
+        # https://github.com/stefanzweifel/git-auto-commit-action#commits-made-by-this-action-do-not-trigger-new-workflow-runs
+        with:
+          token: ${{ secrets.THIS_PAT }}
+      - name: Run doc generation
+        uses: npalm/action-docs-action@v1.2.0
+        with:
+          readme: docs/github-actions.rst
+      - name: Commit doc changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "docs: automated GHA doc update"
+          file_pattern: docs/github-actions.rst

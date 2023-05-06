@@ -1,0 +1,35 @@
+# This dockerfile builds andrewthetechie/cookiecutter-autodocs-gha. This image is
+# designed to be used in GHA actions. It is based on scratch, with the cookiecutter-autodocs
+# python package is compiled into a single binary using pyinstaller and then statically linked using staticx.
+FROM python:3.8-slim AS builder
+WORKDIR /app
+
+# install build requirements
+RUN apt-get update && apt-get install -y binutils patchelf upx build-essential scons
+# https://github.com/JonathonReinhart/staticx/issues/235
+# pin 5.9.0 until that issue is solved in staticx
+RUN pip install --no-warn-script-location --upgrade virtualenv pip pyinstaller==5.9.0 staticx
+
+# copy the app
+COPY ./ /app
+
+## build the app
+# install requirements
+RUN pip install --upgrade pip --constraint=package-requirements.txt && pip install .
+# pyinstaller package the app
+RUN python -OO -m PyInstaller -F cookiecutter_autodocs/cli/__init__.py --name cookiecutter-autodocs --hidden-import=_cffi_backend --hidden-import=typer
+# static link the repo-manager binary
+RUN cd ./dist && \
+    staticx -l $(ldconfig -p| grep libgcc_s.so.1 | awk -F "=>" '{print $2}' | tr -d " ") --strip cookiecutter-autodocs cookiecutter-autodocs-static && \
+    strip -s -R .comment -R .gnu.version --strip-unneeded cookiecutter-autodocs-static
+# will be copied over to the scratch container, pyinstaller needs a /tmp to exist
+RUN mkdir /app/tmp && \
+    chmod 1777 /app/tmp
+# RUN /app/dist/cookiecutter-autodocs-static --help
+
+FROM scratch
+
+ENTRYPOINT ["/cookiecutter-autodocs"]
+
+COPY --from=builder /app/dist/cookiecutter-autodocs-static /cookiecutter-autodocs
+COPY --from=builder /app/tmp /tmp

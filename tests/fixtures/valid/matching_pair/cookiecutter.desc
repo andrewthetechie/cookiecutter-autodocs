@@ -1,0 +1,24 @@
+[project_slug]
+description="The project's slug"
+default = ""
+type = "str"
+
+[python_version]
+default = "3.11.2"
+description = "What python version to use with this project"
+type = "str"
+
+[dev_requirements]
+default = []
+description = "What dev requirements does this project have"
+type = "list"
+
+[author]
+default = ""
+description = "Who's the author?"
+type = "str"
+
+[number]
+default = 7
+description = "Just a number"
+type = "int"
