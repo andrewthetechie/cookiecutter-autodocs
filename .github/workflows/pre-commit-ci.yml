@@ -19,7 +19,7 @@ jobs:
           - {
               name: "cookiecutter-autodocs-generate",
               index: 0,
-              command: "generate cookiecutter",
+              command: "generate",
             }
           - {
               name: "cookiecutter-autodocs-validate",
