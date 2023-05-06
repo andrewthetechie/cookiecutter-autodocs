@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.0](https://github.com/andrewthetechie/cookiecutter-autodocs/compare/v0.1.0...v0.1.0) (2023-05-06)
+
+
+### Features
+
+* initial commit ([959f773](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/959f773527aad9b9afc3df30325d92c040c24ef2))
+
+
+### Bug Fixes
+
+* fix virtualenv poetry conflict ([8b84254](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/8b84254bae16421686cbd289530c8062b4b5fd53))
+
+
+### Miscellaneous Chores
+
+* release 0.1.0 ([775053c](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/775053c977aa28c2e5bc82946ee160a38c330da9))
+
 ## 0.1.0 (2023-05-06)
 
 
