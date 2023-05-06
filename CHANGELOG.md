@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.0 (2023-05-06)
+
+
+### Features
+
+* initial commit ([959f773](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/959f773527aad9b9afc3df30325d92c040c24ef2))
+
+
+### Bug Fixes
+
+* fix virtualenv poetry conflict ([8b84254](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/8b84254bae16421686cbd289530c8062b4b5fd53))
+
 ## 0.1.0 (2023-04-24)
 
 
