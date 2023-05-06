@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/andrewthetechie/cookiecutter-autodocs/compare/v0.1.0...v0.1.1) (2023-05-06)
+
+
+### Miscellaneous Chores
+
+* release 0.1.1 ([2ff4373](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/2ff4373b19acc52cf44d413da38217efc272405c))
+
 ## [0.1.0](https://github.com/andrewthetechie/cookiecutter-autodocs/compare/v0.1.0...v0.1.0) (2023-05-06)
 
 
