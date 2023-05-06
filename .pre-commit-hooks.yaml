@@ -1,7 +1,8 @@
 - id: cookiecutter-autodocs-generate
   name: Generate cookiecutter.json
   language: docker_image
-  entry: andrewthetechie/cookiecutter-autodocs-pc:v0.1.2 generate coookiecutter # x-release-please-version
+  entry: andrewthetechie/cookiecutter-autodocs-pc:v0.1.2 generate # x-release-please-version
+  args: [cookiecutter]
   types: [file, non-executable, text]
   files: ".*cookiecutter.desc"
   description: "Generate a cookiecutter.desc from the cookiecutter.json file, will update existing. Assumes cookiecutter.json is in same directory as cookiecutter.desc"
