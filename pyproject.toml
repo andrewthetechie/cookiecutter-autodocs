@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cookiecutter-autodocs"
-version = "0.1.1"
+version = "0.1.2"
 description = "Generate docs from your cookiecutter template"
 authors = ["Andrew Herrington <andrew.the.techie@gmail.com>"]
 license = "MIT"

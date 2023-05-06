@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/andrewthetechie/cookiecutter-autodocs/compare/v0.1.1...v0.1.2) (2023-05-06)
+
+
+### Continuous Integration
+
+* move to PAT ([300da2f](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/300da2fe716f05207a5fede7987d3d3ff3da38ac))
+
 ## [0.1.1](https://github.com/andrewthetechie/cookiecutter-autodocs/compare/v0.1.1...v0.1.1) (2023-05-06)
 
 
