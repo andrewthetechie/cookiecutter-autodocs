@@ -16,7 +16,7 @@ inputs:
     default: "false"
 runs:
   using: "docker"
-  image: "docker://ghcr.io/andrewthetechie/cookiecutter-autodocs:v0.1.1" # x-release-please-version
+  image: "docker://ghcr.io/andrewthetechie/cookiecutter-autodocs:v0.1.2" # x-release-please-version
   env:
     IN_GHA: "true"
   args:
