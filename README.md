@@ -52,9 +52,7 @@ You can also use the `cookiecutter.desc` file to generate additional documentati
 
 ```shell
 cookiecutter-autodocs generate markdown -i cookiecutter.desc
-```
 
-```
 +-----------------------------------------------------------------------------------------------+
 |      name      |                 description                |  default  |    type    |required|
 +----------------+--------------------------------------------+-----------+------------+--------+
@@ -79,3 +77,21 @@ pip install cookiecutter-autodocs
 ## Documentation
 
 See [ReadTheDocs](https://cookiecutter-autodocs.readthedocs.io/en/latest/) for usage and more detailed documentation.
+
+## Contributing
+
+Contributions are very welcome.
+To learn more, see the [Contributor Guide](./CONTRIBUTING.md).
+
+### Contributors
+
+Thanks go to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
