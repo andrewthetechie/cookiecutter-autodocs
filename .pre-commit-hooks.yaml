@@ -1,7 +1,7 @@
 - id: cookiecutter-autodocs-generate
   name: Generate cookiecutter.json
   language: docker_image
-  entry: andrewthetechie/cookiecutter-autodocs-pc:v0.1.0 generate desc # x-release-please-version
+  entry: andrewthetechie/cookiecutter-autodocs-pc:v0.1.1 generate desc # x-release-please-version
   types: [file, non-executable, text]
   files: ".*cookiecutter.desc"
   description: "Generate a cookiecutter.desc from the cookiecutter.json file, will update existing. Assumes cookiecutter.json is in same directory as cookiecutter.desc"
@@ -9,7 +9,7 @@
 - id: cookiecutter-autodocs-validate
   name: Validate a cookiecutter.desc/json
   language: docker_image
-  entry: andrewthetechie/cookiecutter-autodocs-pc:v0.1.0 validate # x-release-please-version
+  entry: andrewthetechie/cookiecutter-autodocs-pc:v0.1.1 validate # x-release-please-version
   types: [file, non-executable, text]
   files: ".*cookiecutter.desc"
   description: "Validate a cookiecutter.desc and cookiecutter.json file. Assumes the cookiecutter.json is in the same directory as the cookiecutter.desc"
