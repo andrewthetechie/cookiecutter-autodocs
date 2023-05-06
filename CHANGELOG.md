@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.0.0](https://github.com/andrewthetechie/cookiecutter-autodocs/compare/v0.1.2...v1.0.0) (2023-05-06)
+
+
+### Bug Fixes
+
+* fix generate pre-commit hook ([309f19f](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/309f19f8ec2fef486efda16d9074cde982b00df4))
+* fix generate pre-commit hook args ([c25b29a](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/c25b29af43ec11c456692482cd0922c94852b7ce))
+* fix pre-commit ci ([f10ac28](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/f10ac2876791c0385fede69625e728e34e5d998f))
+
+
+### Documentation
+
+* add all contributors ([5fb34a2](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/5fb34a2e54f17fbe8e5d8bb0cd18161e5cf681e3))
+* add andrewthetechie as a contributor for ideas, code, and 2 more ([#10](https://github.com/andrewthetechie/cookiecutter-autodocs/issues/10)) ([00a47b6](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/00a47b617dc0d177951109af57e45be9432cc3c0))
+* cleanup extra contributors header ([7f87c47](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/7f87c47fb54c97aec078852c757bfa305b6bb510))
+
+
+### Miscellaneous Chores
+
+* release 1.0.0 ([3a3ca43](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/3a3ca43b72c2cf892f06698994b930a90b76439b))
+
 ## [0.1.2](https://github.com/andrewthetechie/cookiecutter-autodocs/compare/v0.1.1...v0.1.2) (2023-05-06)
 
 
