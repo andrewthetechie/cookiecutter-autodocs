@@ -6,9 +6,8 @@ def main(entrypoint: str, index: int):
     with open(".pre-commit-hooks.yaml") as fh:
         hooks = yaml.safe_load(fh)
 
-    hooks[index]["entry"] = f"/cookiecutter-autodocs {entrypoint}"
+    hooks[index]["entry"] = "/cookiecutter-autodocs generate"
     hooks[index]["language"] = "docker"
-    hooks[index][args] = []
 
     with open(".pre-commit-hooks.yaml", "w") as fh:
         yaml.dump(hooks, fh)
