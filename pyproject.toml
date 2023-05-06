@@ -9,7 +9,7 @@ packages = [{include = "cookiecutter_autodocs"}]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
-typer = "^0.7.0"
+typer = ">=0.7,<0.10"
 aiofiles = "^23.1.0"
 pydantic = "^1.10.7"
 toml = "^0.10.2"
