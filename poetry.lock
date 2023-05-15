@@ -645,14 +645,14 @@ testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtuale
 
 [[package]]
 name = "pytest-subtests"
-version = "0.10.0"
+version = "0.11.0"
 description = "unittest subTest() support and subtests fixture"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pytest-subtests-0.10.0.tar.gz", hash = "sha256:d9961a67c1791e8c1e32dce7a70ed1e54f3b1e641087f2094f2d37087ab7fb17"},
-    {file = "pytest_subtests-0.10.0-py3-none-any.whl", hash = "sha256:03a50a14f7981cd03090e8ca94205d783e290266d828728210c3d79f4d00c46f"},
+    {file = "pytest-subtests-0.11.0.tar.gz", hash = "sha256:51865c88457545f51fb72011942f0a3c6901ee9e24cbfb6d1b9dc1348bafbe37"},
+    {file = "pytest_subtests-0.11.0-py3-none-any.whl", hash = "sha256:453389984952eec85ab0ce0c4f026337153df79587048271c7fd0f49119c07e4"},
 ]
 
 [package.dependencies]
@@ -1034,4 +1034,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.3)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<4.0"
-content-hash = "1a8216847d8766ad90b4a96a38dc7224db5bd67523201af337f5b5cc464562d7"
+content-hash = "bcc8195d659d9d840ae06e4e01e1dbd5a79bbe3c2ec149ee37d168fbdb63a0b1"
