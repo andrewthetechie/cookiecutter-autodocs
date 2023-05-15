@@ -32,7 +32,7 @@ ruff = ">=0.0.261,<0.0.266"
 pre-commit = "^3.2.1"
 pyupgrade = "^3.3.1"
 types-aiofiles = "^23.1.0.1"
-pytest-subtests = "^0.10.0"
+pytest-subtests = ">=0.10,<0.12"
 types-toml = "^0.10.8.6"
 pyflakes = "^3.0.1"
 
