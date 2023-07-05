@@ -4,14 +4,12 @@
 # This is due to how pre-commit hooks run as a non-root user interefering with how
 # pyinstaller onefile executables extract to a /tmpdir.
 # In the future, it would be awesome to go back to just one image based on scratch
-FROM python:3.8-slim AS builder
+FROM python:3.8-slim-bullseye AS builder
 WORKDIR /app
 
 # install build requirements
 RUN apt-get update && apt-get install -y binutils patchelf upx build-essential scons
-# https://github.com/JonathonReinhart/staticx/issues/235
-# pin 5.9.0 until that issue is solved in staticx
-RUN pip install --no-warn-script-location --upgrade virtualenv pip pyinstaller==5.9.0 staticx
+RUN pip install --no-warn-script-location --upgrade virtualenv pip pyinstaller staticx
 
 # copy the app
 COPY ./ /app

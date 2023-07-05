@@ -1,14 +1,12 @@
 # This dockerfile builds andrewthetechie/cookiecutter-autodocs-gha. This image is
 # designed to be used in GHA actions. It is based on scratch, with the cookiecutter-autodocs
 # python package is compiled into a single binary using pyinstaller and then statically linked using staticx.
-FROM python:3.8-slim AS builder
+FROM python:3.8-slim-bullseye AS builder
 WORKDIR /app
 
 # install build requirements
 RUN apt-get update && apt-get install -y binutils patchelf upx build-essential scons
-# https://github.com/JonathonReinhart/staticx/issues/235
-# pin 5.9.0 until that issue is solved in staticx
-RUN pip install --no-warn-script-location --upgrade virtualenv pip pyinstaller==5.9.0 staticx
+RUN pip install --no-warn-script-location --upgrade virtualenv pip pyinstaller staticx
 
 # copy the app
 COPY ./ /app
