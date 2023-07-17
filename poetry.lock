@@ -465,14 +465,17 @@ tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
 
 [[package]]
 name = "py-markdown-table"
-version = "0.3.3"
-description = "A package used to generate basic markdown tables from a list of dicts"
+version = "0.4.0"
+description = "Package that generates markdown tables from a list of dicts"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "py-markdown-table-0.3.3.tar.gz", hash = "sha256:a82b7fb481729a6ac612c611c29b0ce84ad0bc96b6d09a9bb777f543f9c8c917"},
-    {file = "py_markdown_table-0.3.3-py3-none-any.whl", hash = "sha256:fefa8aeb1ce7a89971e633dde89e3890aecf5f7206a6b8c8279820b6fa62d815"},
+    {file = "py-markdown-table-0.4.0.tar.gz", hash = "sha256:e595f9cc03d8a464f6aa616027be29cf033cd778ae8fe8c030d3d664e790dbc3"},
+    {file = "py_markdown_table-0.4.0-py3-none-any.whl", hash = "sha256:28a4848322cb1f975cf444080d3ada752138968b0f3727e295504c5f5fb5bae1"},
 ]
+
+[package.extras]
+dev = ["black", "pylint", "pytest", "pytest-cov"]
 
 [[package]]
 name = "pydantic"
@@ -981,4 +984,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.3)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<4.0"
-content-hash = "f829d9f7d78a8dfb0c7cfaf4081c5c76cc1eeba5f577b19694f54b568e609bf8"
+content-hash = "0b6b307d2ac3dcf658ce613700dc73fdd05d442e406d38e31a52e0023aed8387"
