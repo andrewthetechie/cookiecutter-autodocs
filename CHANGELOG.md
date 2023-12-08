@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/andrewthetechie/cookiecutter-autodocs/compare/v1.0.0...v1.0.1) (2023-12-08)
+
+
+### Bug Fixes
+
+* pin docker to bullseye ([44789eb](https://github.com/andrewthetechie/cookiecutter-autodocs/commit/44789ebcd44e16443befeb9df418f222d86b9061))
+
 ## [1.0.0](https://github.com/andrewthetechie/cookiecutter-autodocs/compare/v0.1.2...v1.0.0) (2023-05-06)
 
 
