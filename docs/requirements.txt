@@ -1,4 +1,4 @@
 furo==2023.9.10
 sphinx==7.2.6
-poetry==1.6.1
+poetry==1.8.1
 sphinx-click==5.0.1
